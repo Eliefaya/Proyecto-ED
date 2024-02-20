@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <NonVisualComponents>
-    <Component class="javax.swing.JButton" name="jButton16">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jButton14"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btMultiplicacion2">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="66" red="ff" type="rgb"/>
-        </Property>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Arial" size="18" style="0"/>
-        </Property>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="ff" red="ff" type="rgb"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="^"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btMultiplicacion2ActionPerformed"/>
-      </Events>
-    </Component>
-  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -83,8 +59,8 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btMultiplicacion3" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="btSuma" alignment="0" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btSuma" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="btResta" alignment="0" min="-2" pref="52" max="-2" attributes="0"/>
                           <Component id="btExponente" alignment="0" min="-2" pref="52" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -92,7 +68,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="num1" min="-2" pref="52" max="-2" attributes="0"/>
-                          <Component id="jButton13" min="-2" pref="52" max="-2" attributes="0"/>
+                          <Component id="num0" min="-2" pref="52" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -164,16 +140,16 @@
                               <Component id="btIgual" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                               <Component id="btParentesisIzq" alignment="3" min="-2" pref="52" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jButton13" alignment="1" max="32767" attributes="0"/>
+                          <Component id="num0" alignment="1" max="32767" attributes="0"/>
                           <Component id="btParentesisDer" alignment="1" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" attributes="0">
                       <Component id="btExponente" min="-2" pref="52" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="btMultiplicacion3" min="-2" pref="52" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="btSuma" min="-2" pref="52" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="btResta" min="-2" pref="52" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="72" max="32767" attributes="0"/>
@@ -210,6 +186,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="2"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num3">
       <Properties>
@@ -224,6 +203,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="3"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num1">
       <Properties>
@@ -255,6 +237,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="5"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num5ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num6">
       <Properties>
@@ -269,6 +254,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="6"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num6ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num4">
       <Properties>
@@ -300,6 +288,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="8"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num8ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="num9">
       <Properties>
@@ -314,6 +305,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="9"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num9ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btDivision">
       <Properties>
@@ -362,6 +356,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="."/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btPuntoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btBorrar">
       <Properties>
@@ -380,7 +377,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btBorrarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton13">
+    <Component class="javax.swing.JButton" name="num0">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -394,10 +391,10 @@
         <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="num0ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btSuma">
+    <Component class="javax.swing.JButton" name="btResta">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="66" red="ff" type="rgb"/>
@@ -410,6 +407,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="-"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btRestaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btMultiplicacion">
       <Properties>
@@ -506,7 +506,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btExponenteActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btMultiplicacion3">
+    <Component class="javax.swing.JButton" name="btSuma">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="66" red="ff" type="rgb"/>
@@ -520,8 +520,8 @@
         <Property name="text" type="java.lang.String" value="+"/>
       </Properties>
       <Events>
-        <EventHandler event="hierarchyChanged" listener="java.awt.event.HierarchyListener" parameters="java.awt.event.HierarchyEvent" handler="btMultiplicacion3HierarchyChanged"/>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btMultiplicacion3ActionPerformed"/>
+        <EventHandler event="hierarchyChanged" listener="java.awt.event.HierarchyListener" parameters="java.awt.event.HierarchyEvent" handler="btSumaHierarchyChanged"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btSumaActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
