@@ -17,10 +17,10 @@ public class ConvertidorExpresion {
             caracter = expresionInfija.charAt(i);
             numero = new StringBuilder();
             if (caracter >= '0' && caracter <= '9' || caracter == '.') {
-                numero.append(caracter);
                 try {
                     //try catch porque es posible que i+1 no exista, en cuyo caso el programa ya termino
                     caracterSiguiente = expresionInfija.charAt(i+1);
+                    numero.append(caracter);
                     while (caracterSiguiente >= '0' && caracterSiguiente <= '9' || caracterSiguiente == '.') {
                         //Guarda varios dígitos com solo un número
                         i++;
@@ -30,6 +30,7 @@ public class ConvertidorExpresion {
                     expresionPostfija.add(Double.parseDouble(numero.toString()));
                 }
                 catch (Exception e) {
+                    numero.append(expresionInfija.charAt(i));
                     expresionPostfija.add(Double.parseDouble(numero.toString()));
                 }
             } // Si no se cumple revisa si es un parentesis de apertura
@@ -42,9 +43,9 @@ public class ConvertidorExpresion {
                         caracterAnterior = expresionInfija.charAt(i-1);
                         if (caracterAnterior == ')' || (caracterAnterior >= '0' && caracter <= '9')) {
                             while (!pila.isEmpty() && prioridad(pila.peek()) >= prioridad('*')) {
-                        expresionPostfija.add(pila.pop());
-                    }
-                    pila.push('*');
+                                expresionPostfija.add(pila.pop());
+                            }
+                            pila.push('*');
                         }
                     }
                     pila.push(caracter);
@@ -65,9 +66,9 @@ public class ConvertidorExpresion {
                 else if (caracter == '-') {
                     //Checa si el número se debe tratar como negativo o si es una resta, en cuyo caso el menos se guarda como cualquier otro operador
                     if (i == 0) {
-                        numero.append(caracter);
                         try {
                             caracterSiguiente = expresionInfija.charAt(i+1);
+                            numero.append(caracter);
                             while (caracterSiguiente >= '0' && caracterSiguiente <= '9' || caracterSiguiente == '.') {
                                 i++;
                                 caracterSiguiente = expresionInfija.charAt(i+1);
