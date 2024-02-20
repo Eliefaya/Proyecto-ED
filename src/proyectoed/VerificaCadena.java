@@ -14,14 +14,12 @@ public class VerificaCadena {
      * 3) Caracteres admitidos: +, -, *, /, ^, (), '.', números del 1-9
      * 4) Separaciones entre caracteres
      *    No pueden haber dos (o más) operadores juntos
-     *       Excepción: '-' y '+' pueden estar después de cualquier operador diferente pero no pueden haber tres operadores juntos
      *    No pueden haber dos (o más) puntos juntos
-     * 5) No puede haber un cero (que no tenga un número a la izquierda) a la izquierda de un número VERIFICAR !!! Java lo permite !!!
-     * 6) El punto debe tener un número como vecino (a la izquierda y/o derecha)
-     * 7) No pueden haber dos puntos separados por números
-     * 8) Los paréntesis deben estar balanceados
-     * 9) Los paréntesis deben contener por lo menos algo
-     * 10) El contenido de los paréntesis no puede iniciar ni finalizar con un operador que no sea '+' o '-'
+     * 5) El punto debe tener un número como vecino (a la izquierda y/o derecha)
+     * 6) No pueden haber dos puntos separados por números
+     * 7) Los paréntesis deben estar balanceados
+     * 8) Los paréntesis deben contener por lo menos algo
+     * 9) El contenido de los paréntesis no puede iniciar ni finalizar con un operador que no sea '+' o '-'
      */
     
     
@@ -35,7 +33,7 @@ public class VerificaCadena {
      */
     public static boolean verifica(String cadena){
         boolean res = false;
-        if (cadena.length() > 0 && verificaInicio(cadena) && verificaFinal(cadena) && verificaCaracteresAdmitidos(cadena) && verificaSeparaciones(cadena) && verificaCeros(cadena) && verificaPuntosNumVecinos(cadena) && verificaPuntosConteniendoNum(cadena) && verificaParentesisBalanceados(cadena) && verificaParentesisContenido(cadena) && verificaParentesisInicioFinal(cadena)){
+        if (cadena.length() > 0 && verificaInicio(cadena) && verificaFinal(cadena) && verificaCaracteresAdmitidos(cadena) && verificaSeparaciones(cadena) && verificaPuntosNumVecinos(cadena) && verificaPuntosConteniendoNum(cadena) && verificaParentesisBalanceados(cadena) && verificaParentesisContenido(cadena) && verificaParentesisInicioFinal(cadena)){
             res = true;
         }
         return res;
@@ -133,20 +131,13 @@ public class VerificaCadena {
     // 4)
     private static boolean verificaSeparaciones(String cadena){
         boolean res = true;
-        boolean excepcion = false;
         char caracter1 = cadena.charAt(0);
         char caracter2;
         int i = 1;
         while (i < cadena.length() && res){
             caracter2 = cadena.charAt(i);
-            if ((esOperador(caracter1) && esOperador(caracter2)) || (esPunto(caracter1) && esPunto(caracter2))){
-                if (!excepcion && esMasMenos(caracter2) && caracter1 != caracter2)
-                    excepcion = true;
-                else
-                    res = false;
-            }
-            else
-                excepcion = false;
+            if ((esOperador(caracter1) && esOperador(caracter2)) || (esPunto(caracter1) && esPunto(caracter2)))
+                res = false;
             caracter1 = caracter2;
             i++;
         }
@@ -154,33 +145,6 @@ public class VerificaCadena {
     }
     
     // 5)
-    private static boolean verificaCeros(String cadena){
-        boolean res = true;
-        boolean condicion1 = false;
-        char caracter1 = cadena.charAt(0);
-        char caracter2;
-        int i = 1;
-        while (i < cadena.length() && res){
-            caracter2 = cadena.charAt(i);
-            if (i == 1 && esCero(caracter1) && esNumero(caracter2))
-                res = false;
-            else{
-                if (condicion1 && esNumero(caracter2))
-                    res = false;
-                else {
-                    if ((esOperador(caracter1) || esParentesis(caracter1)) && esCero(caracter2))
-                      condicion1 = true;
-                    else
-                      condicion1 = false;
-                }
-            }
-            caracter1 = caracter2;
-            i++;
-        }
-        return res;
-    }
-    
-    // 6)
     private static boolean verificaPuntosNumVecinos(String cadena){
         boolean res = true;
         boolean condicion1 = false;
@@ -207,7 +171,7 @@ public class VerificaCadena {
         return res;
     }
     
-    // 7)
+    // 6)
     private static boolean verificaPuntosConteniendoNum(String cadena){
         boolean res = true;
         boolean condicion = false;
@@ -228,7 +192,7 @@ public class VerificaCadena {
         return res;
     }
     
-    // 8)
+    // 7)
     private static boolean verificaParentesisBalanceados(String cadena){
         boolean res = false;
         boolean huboExcepcion = false;
@@ -256,7 +220,7 @@ public class VerificaCadena {
         return res;
     }
     
-    // 9)
+    // 8)
     private static boolean verificaParentesisContenido(String cadena){
         boolean res = true;
         char caracter1 = cadena.charAt(0);
@@ -272,7 +236,7 @@ public class VerificaCadena {
         return res;
     }
     
-    // 10)
+    // 9)
     private static boolean verificaParentesisInicioFinal(String cadena){
         boolean res = true;
         char caracter1 = cadena.charAt(0);
