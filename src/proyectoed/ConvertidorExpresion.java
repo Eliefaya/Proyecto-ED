@@ -30,7 +30,6 @@ public class ConvertidorExpresion {
                     expresionPostfija.add(Double.parseDouble(numero.toString()));
                 }
                 catch (Exception e) {
-                    numero.append(expresionInfija.charAt(i));
                     expresionPostfija.add(Double.parseDouble(numero.toString()));
                 }
             } // Si no se cumple revisa si es un parentesis de apertura
