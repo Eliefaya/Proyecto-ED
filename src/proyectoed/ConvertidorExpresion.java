@@ -41,7 +41,7 @@ public class ConvertidorExpresion {
                     if (i > 0) {
                         //Checa si el paréntesis se está usando para multiplicar, en cuyo caso previamente corre el código como si hubiera un * antes
                         caracterAnterior = expresionInfija.charAt(i-1);
-                        if (caracterAnterior == ')' || (caracterAnterior >= '0' && caracter <= '9')) {
+                        if (caracterAnterior == ')' || (caracterAnterior >= '0' && caracterAnterior <= '9')) {
                             while (!pila.isEmpty() && prioridad(pila.peek()) >= prioridad('*')) {
                                 expresionPostfija.add(pila.pop());
                             }
