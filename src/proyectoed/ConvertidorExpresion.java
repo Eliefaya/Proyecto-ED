@@ -122,7 +122,7 @@ public class ConvertidorExpresion {
     }
 
     // este switch es para ver la prioridad de los operadores
-    private static int prioridad(char operador) {
+    public static int prioridad(char operador) {
         switch (operador) {
         case '+':
         case '-':

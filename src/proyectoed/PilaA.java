@@ -11,6 +11,7 @@ import java.util.Arrays;
  * @author efaya
  */
 public class PilaA <T> implements PilaADT<T>{
+    
     private T []arrePila; 
     private int tope;
     private final int MAX=100;
@@ -27,6 +28,7 @@ public class PilaA <T> implements PilaADT<T>{
         tope++;
         arrePila[tope]= dato;
     }
+    
     //Metodo que construye un arreglo mas grande y copia los elementos
     //de la pila a el, reasignando el valor del altributo "pila"
     private void expande(){
@@ -34,8 +36,9 @@ public class PilaA <T> implements PilaADT<T>{
         for(int i=0; i<arrePila.length; i++){
         masGrande[i]=arrePila[i];
         arrePila=masGrande;
+        }
     }
-    }
+    
     @Override
     public T pop() {
         if(this.isEmpty())
@@ -58,8 +61,10 @@ public class PilaA <T> implements PilaADT<T>{
             throw new ExcepcionColeccionVacia("La pila esta vacia ");
         return arrePila[tope];
     }
+    
     public String toString(){
-        StringBuilder texto = new StringBuilder("Pila de 0 a tope: \n");
+        StringBuilder texto = new StringBuilder();
+        texto.append("Pila de 0 a tope: \n");
         for(int i=0; i<=tope; i++){
             texto.append(arrePila[i]).append(" ");
         }
@@ -87,8 +92,8 @@ public class PilaA <T> implements PilaADT<T>{
         final PilaA<?> other = (PilaA<?>) obj;
         return Arrays.deepEquals(this.arrePila, other.arrePila);
     }
+    
     // Método para verificar si un elemento está contenido en la pila
-   // Método para verificar si un elemento está contenido en la pila
     public boolean contains(T elemento) {
         for (int i = 0; i < arrePila.length; i++) {
             if (arrePila[i] == elemento) {
@@ -96,8 +101,5 @@ public class PilaA <T> implements PilaADT<T>{
             }
         }
         return false;
-    
-            
-    
     }
 }
