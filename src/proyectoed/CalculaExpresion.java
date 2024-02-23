@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class CalculaExpresion {
     
-    public static double calculaResultado(ArrayList expresionPostfija) throws Exception {
+    public static double calculaResultado(ArrayList expresionPostfija) {
         PilaA<Double> operandos = new PilaA<Double>();
         double numero1, numero2;
         char operador;
@@ -46,7 +46,7 @@ public class CalculaExpresion {
                 }
             }
         } catch (Exception e) {
-            throw new Exception("Error al realizar la operacion");
+            throw new RuntimeException("Error al realizar la operacion");
         }
         return operandos.pop();
     }

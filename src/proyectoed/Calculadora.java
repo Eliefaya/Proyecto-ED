@@ -416,17 +416,18 @@ public class Calculadora extends javax.swing.JFrame {
     private void btIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIgualActionPerformed
         String operacion;
         operacion = txtEscribir.getText();
-        if (VerificaCadena.verifica(operacion)) {
-            try {
-                txtEscribir.setText(CalculaExpresion.calculaResultado(ConvertidorExpresion.infijaAPostfija(operacion)) + "");
+        if (!operacion.equals(""))
+            if (VerificaCadena.verifica(operacion)) {
+                try {
+                    txtEscribir.setText(CalculaExpresion.calculaResultado(ConvertidorExpresion.infijaAPostfija(operacion)) + "");
+                }
+                catch(Exception e) {
+                    txtEscribir.setText("Error al realizar la operacion.");
+                }
             }
-            catch(Exception e) {
-                txtEscribir.setText("Error al realizar la operacion.");
+            else {
+                txtEscribir.setText("Error de sintaxis");
             }
-        }
-        else {
-            txtEscribir.setText("Error de sintaxis");
-        }
     }//GEN-LAST:event_btIgualActionPerformed
 
     private void btExponenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExponenteActionPerformed

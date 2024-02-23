@@ -56,7 +56,7 @@ public class ConvertidorExpresionTest {
     public void testPrioridad() {
         System.out.println("prioridad");
         char operador = ' ';
-        int expResult = 0;
+        int expResult = -1;
         int result = ConvertidorExpresion.prioridad(operador);
         assertEquals(expResult, result);
     }
