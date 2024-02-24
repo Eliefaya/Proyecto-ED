@@ -7,22 +7,22 @@ package proyectoed;
 public class VerificaCadena {
 
     /**
-     * Función que verifica que la operación no tenga errores de sintaxis
-     * <ul> Condiciones de la cadena
-     * <li> La cadena no puede iniciar con un operador que no sea '+' o '-' </li>
-     * <li> La cadena no puede finalizar con un operador </li>
-     * <li> Caracteres admitidos: +, -, *, /, ^, (), '.', números del 1-9 </li>
-     * <li> <ol> Separaciones entre caracteres
-     * <li> No pueden haber dos (o más) operadores juntos </li>
-     * <li> No pueden haber dos (o más) puntos juntos </li>
-     * </ol>
-     * <li> El punto debe tener un número como vecino (a la izquierda y/o derecha) </li>
-     * <li> No pueden haber dos puntos separados por números </li>
-     * <li> Los paréntesis deben estar balanceados </li>
-     * <li> Los paréntesis deben contener por lo menos algo </li>
-     * <li> El contenido de los paréntesis no puede iniciar con un operador que no sea '+' o '-' y no puede finalizar con un operador </li>
+     * <li> Función que verifica que la operación no tenga errores de sintaxis. </li>
+     * <li> Condiciones de la cadena. </li>
+     * <ol> <li> La cadena no puede iniciar con un operador que no sea '+' o '-'. </li>
+     * <li> La cadena no puede finalizar con un operador. </li>
+     * <li> Caracteres admitidos: +, -, *, /, ^, (), '.', números del 1-9. </li>
+     * <li> Separaciones entre caracteres. </li>
+     * <ul> <li> No pueden haber dos (o más) operadores juntos. </li>
+     * <li> No pueden haber dos (o más) puntos juntos. </li>
      * </ul>
-     * Nota: las funciones que utiliza verifica están configuradas como public únicamente para que el javadoc sea correctamente generado. 
+     * <li> El punto debe tener un número como vecino (a la izquierda y/o derecha). </li>
+     * <li> No pueden haber dos puntos separados por números. </li>
+     * <li> Los paréntesis deben estar balanceados. </li>
+     * <li> Los paréntesis deben contener por lo menos algo. </li>
+     * <li> El contenido de los paréntesis no puede iniciar con un operador que no sea '+' o '-' y no puede finalizar con un operador. </li>
+     * </ol>
+     * <li> Nota: las funciones que utiliza verifica están configuradas como public únicamente para que el javadoc sea correctamente generado. </li>
      * @param cadena
      * @return Regresa true si la cadena cumple con todas las condiciones, y false si no cumple con alguna de ellas.
     */
@@ -39,7 +39,7 @@ public class VerificaCadena {
     /**
      * Identificador de caracter
      * @param caracter
-     * @return Regresa true si un caracter en específico es paréntesis
+     * @return Regresa true si un caracter en específico es paréntesis.
      */
     public static boolean esParentesis(char caracter){
         boolean res = false;
@@ -51,7 +51,7 @@ public class VerificaCadena {
     /**
      * Identificador de caracter
      * @param caracter
-     * @return Regresa true si un caracter en específico es operador
+     * @return Regresa true si un caracter en específico es operador.
      */
     public static boolean esOperador(char caracter){
         boolean res = false;
@@ -63,7 +63,7 @@ public class VerificaCadena {
     /**
      * Identificador de caracter
      * @param caracter
-     * @return Regresa true si un caracter en específico es punto
+     * @return Regresa true si un caracter en específico es punto.
      */
     public static boolean esPunto(char caracter){
         boolean res = false;
@@ -75,7 +75,7 @@ public class VerificaCadena {
     /**
      * Identificador de caracter
      * @param caracter
-     * @return Regresa true si un caracter en específico es número
+     * @return Regresa true si un caracter en específico es número.
      */
     public static boolean esNumero(char caracter){
         boolean res = false;
@@ -87,7 +87,7 @@ public class VerificaCadena {
     /**
      * Identificador de caracter
      * @param caracter
-     * @return Regresa true si un caracter en específico es + o -
+     * @return Regresa true si un caracter en específico es + o -.
      */
     public static boolean esMasMenos(char caracter){
         boolean res = false;
@@ -99,7 +99,7 @@ public class VerificaCadena {
     /**
      * Condición 1
      * @param cadena
-     * @return Regresa true si la cadena no inicia con un operador que no sea '+' o '-'
+     * @return Regresa true si la cadena no inicia con un operador que no sea '+' o '-'.
      */
     public static boolean verificaInicio(String cadena){
         boolean res = true;
@@ -117,7 +117,7 @@ public class VerificaCadena {
     /**
      * Condición 2
      * @param cadena
-     * @return Regresa true si la cadena no finaliza con un operador
+     * @return Regresa true si la cadena no finaliza con un operador.
      */
     public static boolean verificaFinal(String cadena){
         boolean res = true;
@@ -135,7 +135,7 @@ public class VerificaCadena {
     /**
      * Condición 3
      * @param cadena
-     * @return Regresa true si la cadena no contiene caracteres que no sean +, -, *, /, ^, (), '.' o números del 1-9
+     * @return Regresa true si la cadena no contiene caracteres que no sean +, -, *, /, ^, (), '.' o números del 1-9.
      */
     public static boolean verificaCaracteresAdmitidos(String cadena){
         boolean res = true;
@@ -157,7 +157,7 @@ public class VerificaCadena {
     /**
      * Condición 4
      * @param cadena
-     * @return Regresa true si no hay dos operadores ni dos puntos juntos
+     * @return Regresa true si no hay dos operadores ni dos puntos juntos.
      */
     public static boolean verificaSeparaciones(String cadena){
         boolean res = true;
@@ -182,7 +182,7 @@ public class VerificaCadena {
     /**
      * Condición 5
      * @param cadena
-     * @return Regresa true si el punto tiene un número como vecino (a la izquierda y/o derecha)
+     * @return Regresa true si el punto tiene un número como vecino (a la izquierda y/o derecha).
      */
     public static boolean verificaPuntosNumVecinos(String cadena){
         boolean res = true;
@@ -218,7 +218,7 @@ public class VerificaCadena {
     /**
      * Condición 6
      * @param cadena
-     * @return Regresa true si, en ningún lugar de la cadena, existen dos puntos que contengan números entre ellos
+     * @return Regresa true si, en ningún lugar de la cadena, existen dos puntos que contengan números entre ellos.
      */
     public static boolean verificaPuntosConteniendoNum(String cadena){
         boolean res = true;
@@ -247,7 +247,7 @@ public class VerificaCadena {
     /**
      * Condición 7
      * @param cadena
-     * @return Regresa true si los paréntesis de la cadena estan balanceados
+     * @return Regresa true si los paréntesis de la cadena estan balanceados.
      */
     public static boolean verificaParentesisBalanceados(String cadena){
         boolean res = false;
@@ -283,7 +283,7 @@ public class VerificaCadena {
     /**
      * Condición 8
      * @param cadena
-     * @return Regresa true si no hay paréntesis vacíos
+     * @return Regresa true si no hay paréntesis vacíos.
      */
     public static boolean verificaParentesisContenido(String cadena){
         boolean res = true;
@@ -308,7 +308,7 @@ public class VerificaCadena {
     /**
      * Condición 9
      * @param cadena
-     * @return Regresa true si el contenido de los paréntesis no inicia con un operador que no sea '+' o '-', y no termina con un operador
+     * @return Regresa true si el contenido de los paréntesis no inicia con un operador que no sea '+' o '-', y no termina con un operador.
      */
     public static boolean verificaParentesisInicioFinal(String cadena){
         boolean res = true;
