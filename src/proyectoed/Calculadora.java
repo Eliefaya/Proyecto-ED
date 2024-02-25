@@ -3,9 +3,20 @@ package proyectoed;
 
 /**
  *
- * @author efaya
+ * @author Elie Fayad
  */
+/**
+ * La clase Calculadora proporciona una interfaz gráfica para realizar operaciones matemáticas simples.
+ * Esta calculadora admite las operaciones de suma, resta, multiplicación, división y exponenciación.
+ * También permite el uso de paréntesis para agrupar operaciones.
+ * La interfaz gráfica muestra los botones numéricos del 0 al 9, así como botones para operadores y otras funciones.
+ * Los resultados de las operaciones se muestran en un campo de texto editable.
+ * 
+ * @author Elie Fayad
+ */
+
 public class Calculadora extends javax.swing.JFrame {
+   
 
     /**
      * Creates new form Calculadora
@@ -13,6 +24,7 @@ public class Calculadora extends javax.swing.JFrame {
     public Calculadora() {
         initComponents();
     }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.

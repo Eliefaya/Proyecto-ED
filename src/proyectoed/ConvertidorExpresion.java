@@ -2,10 +2,29 @@ package proyectoed;
 
 import java.util.ArrayList;
 /**
- *
- * @author efaya y Kyrie
+ * Clase que proporciona un método para convertir de expresiones infijas a postfijas
+ * Inlcuye un método para determinar la prioridad de los operadores
+ * @author Elie y Kyrie
  */
 public class ConvertidorExpresion {
+    /**
+     * Convierte una expresión infija a postfija.
+     * 
+     * @param expresionInfija La expresión infija a convertir.
+     * @return Un ArrayList de Doubles y caracteres (+, -, *, /, ^).
+     * <ul>
+     * <li> La expresión infija debe ser válida. </li>
+     * <li> Los operadores válidos son (+, -, *, /, ^, (, )). </li>
+     * <li> Los operandos válidos son números enteros y decimales. </li>
+     * </ul>
+     */
+    
+    /**
+     * 
+     * @param expresionInfija Un String con la expresión escrita en notación infija
+     * @return Un ArrayList genérico con los números como doubles y los operadores como caracteres en notación postfija
+     * @see CalculaExpresion calculaResultado
+     */
     public static ArrayList infijaAPostfija(String expresionInfija) {
         StringBuilder numero;
         ArrayList expresionPostfija;
@@ -120,6 +139,16 @@ public class ConvertidorExpresion {
         }
         return expresionPostfija;
     }
+    /**
+     * Método para determinar la prioridad de un operador
+     * @param operador El operador cuya prioridad se va a determinar
+     * @return Un entero que representa la prioridad del operador: <ul>
+     * <li> 1 si el operador es + o - </li>
+     * <li> 2 si el operador es * o / </li>
+     * <li> 3 si el operador es ^ </li>
+     * <li> -1 en cualquier otro caso </li>
+     * </ul>
+     */
 
     // este switch es para ver la prioridad de los operadores
     public static int prioridad(char operador) {

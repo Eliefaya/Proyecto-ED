@@ -9,14 +9,14 @@ import java.util.ArrayList;
 public class CalculaExpresion {
     
     /**
-     * Calcula el resultado de una operacion escrita en notacion postfija.
+     * Calcula el resultado de una operación escrita en notación postfija.
      * @param expresionPostfija (ArrayList de doubles y caracteres, estos siendo +, -, *, / y ^)
      * @see Calculadora
      * btIgualActionPerformed
      * @return <ul>
      * <li> El resultado, si puede ser calculado (double) </li>
      * <li> Infinity o NaN </li>
-     * <li> RuntimeException "Error al realizar la operacion" si la expresion postfija tiene un error, o no se puede calcular el resultado por otra razon </li>
+     * <li> RuntimeException "Error al realizar la operacion" si la expresión postfija tiene un error, o no se puede calcular el resultado por otra razón </li>
      * </ul>
      */
     public static double calculaResultado(ArrayList expresionPostfija) {
